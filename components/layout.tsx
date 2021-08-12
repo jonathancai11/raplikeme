@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 export default function Layout({ children, home }) {
   return (
-    <div>
+    <div className="relative">
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta name="description" content="Learn how to build a personal website using Next.js" />
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
       {/* <header>Navbar</header> */}
       <main>{children}</main>
       {!home && (
-        <div>
+        <div className="absolute top-8 left-8">
           <Link href="/">
             <a>← Back to home</a>
           </Link>
